@@ -1,0 +1,339 @@
+﻿%% Copyright (C) 2008 Johan Oudinet <oudinet@lri.fr>
+%%  
+%% Permission is granted to make and distribute verbatim copies of
+%% this manual provided the copyright notice and this permission notice
+%% are preserved on all copies.
+%%  
+%% Permission is granted to process this file through TeX and print the
+%% results, provided the printed document carries copying permission
+%% notice identical to this one except for the removal of this paragraph      
+%% (this paragraph not being relevant to the printed manual).
+%%  
+%% Permission is granted to copy and distribute modified versions of this
+%% manual under the conditions for verbatim copying, provided that the
+%% entire resulting derived work is distributed under the terms of a 
+%% permission notice identical to this one. 
+%%  
+%% Permission is granted to copy and distribute translations of this manual
+%% into another language, under the above conditions for modified versions,
+%% except that this permission notice may be stated in a translation
+%% approved by the Free Software Foundation
+%%  
+
+\documentclass[oneside]{memoir}
+\let\STARTCODE\relax 
+\let\STOPCODE\relax 
+\STARTCODE
+\usepackage{color,calc,graphicx,soul}
+\definecolor{nicered}{rgb}{.647,.129,.149} \makeatletter
+\newlength\dlf@normtxtw \setlength\dlf@normtxtw{\textwidth}
+\def\myhelvetfont{\def\sfdefault{mdput}} \newsavebox{\feline@chapter}
+\newcommand\feline@chapter@marker[1][4cm]{%
+  \sbox\feline@chapter{%
+    \resizebox{!}{#1}{\fboxsep=1pt%
+      \colorbox{nicered}{\color{white}\bfseries\sffamily\thechapter}%
+    }}%
+  \rotatebox{90}{%
+    \resizebox{%
+      \heightof{\usebox{\feline@chapter}}+\depthof{\usebox{\feline@chapter}}}%
+    {!}{\scshape\so\@chapapp}}\quad%
+  \raisebox{\depthof{\usebox{\feline@chapter}}}{\usebox{\feline@chapter}}%
+} \newcommand\feline@chm[1][4cm]{%
+  \sbox\feline@chapter{\feline@chapter@marker[#1]}%
+  \makebox[0pt][l]{% aka \rlap
+    \makebox[1cm][r]{\usebox\feline@chapter}%
+  }} \makechapterstyle{daleif1}{
+%   \setlength{\beforechapskip}{0pt}
+%   \setlength{\midchapskip}{0pt}
+  \setlength{\afterchapskip}{10pt}
+%   \setlength{\chapindent}{0pt}
+  \renewcommand{\insertchapterspace}{}
+  \renewcommand\chapnamefont{\normalfont\Large\scshape\raggedleft\so}
+  \renewcommand\chaptitlefont{\normalfont\huge\bfseries\scshape\color{nicered}}
+  \renewcommand\chapternamenum{} 
+  \renewcommand\printchaptername{}
+  \renewcommand\printchapternum{\vspace{-5.5cm}\null\hfill\feline@chm[2.5cm]\par}
+  \renewcommand\afterchapternum{\par\vskip\midchapskip}
+  \renewcommand\printchaptertitle[1]{\chaptitlefont\raggedleft
+    ##1\par}
+  \renewcommand\printchapternonum{\vspace{-3.5cm}}
+ %  \renewcommand{\insertchapterspace}{}
+}
+
+
+% \redef\@makeschapterhead#1{%
+% %   \chapterheadstart
+%   {\parindent \z@ \raggedright \normalfont
+%    \printchapternonum
+%    \interlinepenalty\@M
+%    \printchaptertitle{#1}
+%    \afterchaptertitle
+%   }
+% }
+
+
+\makeatother
+\chapterstyle{daleif1}
+\STOPCODE
+
+%\documentclass[20pt,a4paper]{article} 
+\usepackage[french]{babel}
+\usepackage[T2A,T1]{fontenc}        
+\usepackage{ucs}       
+\usepackage[utf8]{inputenc} 
+\usepackage{lmodern} 
+%\usepackage[utf8]{inputenc}     
+%\usepackage[latin1]{inputenc} 
+\usepackage{textcomp}  
+\usepackage{epsfig}
+\usepackage{acronym}
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{pgf}
+\usepackage{tikz}
+\usepackage{setspace}%
+\usepackage{hhline}
+\usepackage[colorlinks]{hyperref}
+\usepackage[all]{hypcap}
+\usepackage{algorithm, algorithmic}
+
+\usetikzlibrary{shapes,arrows,automata,backgrounds}
+\usepackage{wrapfig}
+%\usepackage[version=3]{mhchem}
+\usepackage{microtype}
+\usepackage{multicol}
+% \usepackage[T1]{fontenc}
+% \usepackage{nimbus}
+% \includeonly{intro,background,one_model}
+
+% francisation des algorithmes
+\renewcommand{\sectionmark}[1]{}
+\renewcommand{\algorithmicrequire} {\textbf{\textsc{Entrées:}}}
+\renewcommand{\algorithmicensure}  {\textbf{\textsc{Sorties:}}}
+\renewcommand{\algorithmicwhile}   {\textbf{tantque}}
+\renewcommand{\algorithmicdo}      {\textbf{faire}}
+\renewcommand{\algorithmicendwhile}{\textbf{fin tantque}}
+\renewcommand{\algorithmicend}     {\textbf{fin}}
+\renewcommand{\algorithmicif}      {\textbf{si}}
+\renewcommand{\algorithmicendif}   {\textbf{finsi}}
+\renewcommand{\algorithmicelse}    {\textbf{sinon}}
+\renewcommand{\algorithmicthen}    {\textbf{alors}}
+\renewcommand{\algorithmicfor}     {\textbf{pour}}
+\renewcommand{\algorithmicforall}  {\textbf{pour tout}}
+\renewcommand{\algorithmicdo}      {\textbf{faire}}
+\renewcommand{\algorithmicendfor}  {\textbf{fin pour}}
+\renewcommand{\algorithmicloop}    {\textbf{boucler}}
+\renewcommand{\algorithmicendloop} {\textbf{fin boucle}}
+\renewcommand{\algorithmicrepeat}  {\textbf{répéter}}
+\renewcommand{\algorithmicuntil}   {\textbf{jusqu'à}}
+
+\floatname{algorithm}{Algorithme}
+
+
+%
+% Definir les termes francais 
+%
+  \gdef\@dedicace{D\'edicace}
+  \gdef\@remerciements{Remerciements}
+  \def\prefacename{Avant-propos}
+  \def\refname{R\'ef\'erences}
+  \gdef\@resume{R\'esum\'e}
+  \gdef\@notation{Notation}
+   \gdef\@abbreviation{Liste des Sigles}
+  \gdef\abstractname{Abstract}
+  \def\bibname{R\'ef\'erences}
+  \gdef\@introduction{Introduction}
+  \def\chaptername{Chapitre}
+  \gdef\@conclusion{Conclusion}
+  \def\appendixname{Annexe}
+  \gdef\@tabledesmatieres{Table des mati\`eres}
+  \gdef\@listedesfigures{Liste des figures}
+  \gdef\@listedeslistings{Liste des codes source}
+  \gdef\@listedestableaux{Liste des tableaux}
+  \gdef\@listedesannexes{Liste des annexes}
+  \def\indexname{Index}
+  \def\figurename{Figure}
+  \def\tablename{Tableau}
+  \def\partname{Partie}
+  \def\ccname{Copie \`a}
+  \def\pagename{Page}
+\def\today{\ifnum\day=1\relax 1\/$^{\rm er}$\else
+  \number\day\fi \space\ifcase\month\or
+  janvier\or f\'evrier\or mars\or avril\or mai\or juin\or
+  juillet\or ao\^ut\or septembre\or octobre\or novembre\or
+  d\'ecembre\fi
+  \space\number\year} 
+
+% Malheureusement, il y a un bogue dans Babel qui fait que
+% figurename, tablename, etc. se réinitialise toujours à la valeur par
+% défaut. Plutôt qu'avoir Figure et Tableau, en Français, on a
+% Fig et Tab, à moins de recopier.
+\def\captionsfrench{
+   \def\refname{R\'ef\'erences}%
+   \def\abstractname{R\'esum\'e}%
+   \def\bibname{Bibliographie}%
+   \def\prefacename{Avant-propos}%
+   \def\chaptername{Chapitre}%
+   \def\appendixname{Annexe}%
+   \def\contentsname{Table des mati\`eres}%
+   \def\listfigurename{Liste des figures}%
+   \def\listtablename{Liste des tableaux}%
+   \def\indexname{Index}%
+   \def\figurename{Figure}%    
+   \def\tablename{Tableau}%
+   \def\CaptionSeparator{\space\textendash\space}%
+   \def\partname{\protect\@Fpt partie}%
+   \def\@Fpt{{\ifcase\value{part}\or Premi\`ere\or Deuxi\`eme\or
+   Troisi\`eme\or Quatri\`eme\or Cinqui\`eme\or Sixi\`eme\or
+   Septi\`eme\or Huiti\`eme\or Neuvi\`eme\or Dixi\`eme\or Onzi\`eme\or
+   Douzi\`eme\or Treizi\`eme\or Quatorzi\`eme\or Quinzi\`eme\or
+   Seizi\`eme\or Dix-septi\`eme\or Dix-huiti\`eme\or Dix-neuvi\`eme\or
+   Vingti\`eme\fi}\space\def\thepart{}}%
+   \def\pagename{page}%
+   \def\seename{{\emph{voir}}}%
+   \def\alsoname{{\emph{voir aussi}}}%
+   \def\enclname{P.~J. }%
+   \def\ccname{Copie \`a }%
+   \def\headtoname{}%
+   \def\proofname{D\'emonstration}% for AMS-\LaTeX
+   \def\glossaryname{Glossaire}%
+}
+
+
+%% Page layout
+\setlength{\oddsidemargin}{1cm}
+\setlength{\evensidemargin}{1.5cm}
+\setlength{\topmargin}{0cm}
+\setlength{\textheight}{21cm}
+\setlength{\textwidth}{15cm}
+
+% \setlength{\beforeschapskip}{-2cm}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+\begin{titlingpage}
+ 
+\begin{center}
+ 
+
+% Upper part of the page
+\includegraphics[height=2cm]{ups}\\[1cm]
+
+\begin{minipage}{0.2\textwidth}
+  \begin{flushleft}
+    \includegraphics[width=0.8\textwidth]{cnrs}
+  \end{flushleft}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+  \begin{flushright}
+    \includegraphics[width=0.8\textwidth]{inria}
+  \end{flushright}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+ \begin{flushright}
+   \includegraphics[width=0.6\textwidth]{limsi}
+  \end{flushright}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+  \begin{flushright}
+    \includegraphics[width=0.5\textwidth]{lri}
+  \end{flushright}
+\end{minipage}
+
+
+\vspace{2cm}  
+\textsc{\Large Stage de Master 2 Recherche en Informatique}\\[0.5cm]
+ 
+ 
+% Title
+\HRule \\[0.4cm]
+{ \huge \bfseries Protection contre les attaques par canaux auxiliaires visant l'hyperviseur}\\[0.4cm]
+ 
+\HRule \\[1.5cm]
+ 
+% Author and supervisor
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Auteur :}\\
+Georges  \textsc{Ouffoué}
+\end{flushleft}
+\end{minipage}
+\begin{minipage}{0.4\textwidth}
+\begin{flushright} \large
+\emph{Maître de stage :} \\
+Dr. Marc-Antoine \textsc{Lacoste}
+\end{flushright}
+\end{minipage}
+\vfill
+\emph{Organisme d'accueil : }\\
+Orange Labs Issy-les-Moulineaux
+
+ 
+\vfill
+
+
+ 
+% Bottom of the page
+{Secrétariat - tél : 01 69 15 75 18  Fax : 01 69 15 42 72\\
+courrier électronique : Jacques.Laurent@lri.fr\\
+\large 13 Avril -- 30 Septembre 2015}
+ 
+\end{center}
+ 
+\end{titlingpage}
+
+
+\pagenumbering{roman}
+
+\tableofcontents
+
+\newpage
+\thispagestyle{empty}%
+\newpage
+
+\chapter*{Résumé}
+
+Post hoc impie perpetratum quod in aliis quoque iam timebatur, tamquam
+licentia crudelitati indulta per suspicionum nebulas aestimati quidam
+noxii damnabantur. quorum pars necati, alii puniti bonorum multatione
+actique laribus suis extorres nullo sibi relicto praeter querelas et
+lacrimas, stipe conlaticia victitabant, et civili iustoque imperio ad
+voluntatem converso cruentam, claudebantur opulentae domus et
+clarae~\cite{ammianius42}.
+
+\section*{Mots clefs}
+Post, impie, aliis, multatione, domus.
+
+\pagebreak
+
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\input{intro}
+\input{devlpmt}
+\input{conclu}
+
+\chapter*{Remerciements}
+Saraceni tamen nec amici nobis umquam nec hostes optandi, ultro
+citroque discursantes quicquid inveniri poterat momento temporis parvi
+vastabant milvorum rapacium similes, qui si praedam dispexerint
+celsius, volatu rapiunt celeri, aut nisi impetraverint, non
+inmorantur.
+
+\bibliographystyle{plain}
+\bibliography{rapportM2R}
+
+\appendix
+
+% \input{appendixA}
+
+\end{document}
+
+
+%%% Local Variables: 
+%%% mode: latex
+%%% TeX-master: "rapportM2R"
+%%% End: 
