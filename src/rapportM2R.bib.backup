@@ -1,21 +1,26 @@
-﻿ 
+﻿@Article{ammianius42,
+  author = 	 {Marcellini Ammianius},
+  title = 	 {Liber {XIV}},
+  journal = 	 {The Latin Library},
+  year = 	 42,
+  volume = 	 {51--69},
+  pages = 	 {106--121}}
+  
   @Article{Ristenpart09,
   author = 	 {T. Ristenpart, E. Tromer, H. Shacham, and S. Savage},
   title = 	 { Hey, you, get off of my cloud: Exploring information leakage in third-party compute clouds},
-  inproceedings=
   journal = 	 {Proceedings of the 16th ACM conference on Computer and communications security},
-  publisher =    {ACM},
   year = 	 2009,
+  volume = 	 {51--69},
   pages = 	 {199--212}}
   
-  @Article{zang12,
-  author = 	 {Y. Zhang, A. Juels, M. K. Reiter, and T. Ristenpart},
-  title = 	 {Cross-VM side channels and their use to extract private keys},
-  journal = 	 {In Proceedings of the 2012 ACM conference on Computer and communications security,CCS ’12},
-  publisher=     {ACM},
-  
-  pages = 	 {305--316}}
-  
+  @Article{ammianius42,
+  author = 	 {Marcellini Ammianius},
+  title = 	 {Liber {XIV}},
+  journal = 	 {The Latin Library},
+  year = 	 42,
+  volume = 	 {51--69},
+  pages = 	 {106--121}}
   
   @Article{ammianius42,
   author = 	 {Marcellini Ammianius},

@@ -19,7 +19,7 @@
 %% except that this permission notice may be stated in a translation
 %% approved by the Free Software Foundation
 %%  
-\chapter{Introduction}
+\chapter{Introduction}  
 
 \section{Contexte et objectifs du stage}
 \label{sec:contexte}
@@ -30,30 +30,25 @@ Afin  d'assurer une politique de croissance durable, le groupe Orange a mis en p
 Par ailleurs,l'informatique dans les nuages ou cloud computing est un modèle  informatique permettant  l'accès à des ressources partagées au travers d'un réseau haut débit (Internet). Ce nouveau concept informatique a révolutionné l'industrie informatique.  En effet, le cloud permet de  mutualiser les ressources informatiques sur des serveurs géographiquement répartis, les utiliser à la demande et être facturés à l'utilisation. Ce qui permet de réduire les coûts de production et d'exploitation. En dépit de ces différentes facilités qu'offre le  cloud, la sécurité demeure  le principal  frein  à son  adoption.  Le cloud comme bien d'autres infrastructures tirant parti d'Internet, est également confronté à des attaques visant la disponibilité, l'intégrité et la confidentialité des données. Récemment, de nouvelles attaques  par  canaux auxiliaires  ont émergé dans le cloud. Ces attaques se basent sur des mécanismes indirects de compromission  tels que l'observation  et la mesure de l'activité des ressources partagées (cache, disque dur)  pour extirper des clés de chiffrement. 
 \par 
 Tout fournisseur de cloud comme Orange se doit d'assurer à ses clients la sécurité de ses plateformes contre ces attaques qui deviennent de plus en plus réalistes.
-Ainsi,le département sécurité d'Orange Labs dont la mission  principale est  de veiller à la sureté et la sécurité des contenus offerts par Orange et d'anticiper les éventuelles menaces, s'est penché sur la question des attaques par canaux auxiliaires dans le cloud dans le cadre de ses activités de recherche.U. Ainsi, les principaux objectifs du stage sont :
-L'établissement d'une cartographie des contre-mesures existantes (au niveau matériel, système, ou applicatif) et les comparez (performance, sécurité, compatibilité) avec les clouds existants.
-La proposition d'une nouvelle contremesure contre ces attaques
-La validation sur des plateformes cloud
+Ainsi,le département sécurité d'Orange Labs dont la mission  principale est  de veiller à la sureté et la sécurité des contenus offerts par Orange et d'anticiper les éventuelles menaces, s'est penché sur la question des attaques par canaux auxiliaires dans le cloud dans le cadre de ses activités de recherche. Ce présent stage de recherche a alors été proposé.Les principaux objectifs du stage sont :
+
+\begin{enumerate}
+\item L'établissement d'une cartographie des contre-mesures existantes (au niveau matériel, système, ou applicatif) et les comparez (performance, sécurité, compatibilité) avec les clouds existants;
+\item La proposition d'une nouvelle contremesure contre ces attaques;
+\item La validation sur des plateformes cloud.
+
+\end{enumerate}  
+
+\section{Motivations et plan du rapport}
+\label{sec:plan} 
+
+Un parcours succinct de la littérature montre que a première étude menée  sur ce type d’attaque dans le cloud a été réalisée dans [1]. Cette étude a montré l’effectivité de cette attaque sur les plateformes actuelles de cloud.  Un potentiel attaquant peut  en exploitant ces  failles matérielles d’implémentation  déployer sa machine virtuelle(VM) sur une même plateforme qu’une victime cible et dérober des informations confidentielles en examinant par exemple le trafic réseau ou les frappes de clavier. A la suite de cette attaque, plusieurs autres attaques ont été réalisées [2], [3]. Cependant  l’attaque la plus significative  est celle de Zhang et al. [2] qui a permis de recouvrir la totalité d’une clé de chiffrement dans de la libraire de sécurisation  libre GnuPG [4].
+Plusieurs  contremesures ont été proposées tant par des chercheurs académiques que par  des chercheurs industriels permettant de se prémunir contre ces attaques. Ces moyens de lutte  sont regroupés en plusieurs catégories.  La première catégorie de contremesures, vise à   limiter le partage des ressources.  Ainsi on peut citer [5] et [6].  Un autre type de contremesures  faisant partie de cette classe consiste à effectuer  le bruitage des données dans  le cache ( [7], [8]) de telle sorte que l’attaquant n’arrive pas à distinguer les données présentes dans le cache. Une manière différente de se protéger contre ces attaques est  de tenir compte des contraintes  de sécurité dans le placement  des machines virtuelles. Ainsi ( [9], [10] ) proposent des métriques et heuristiques de placement  qui permettent à des entités, respectivement, de quantifier la vulnérabilité de ces attaques et de  déployer ou  non  leurs machines sur des mêmes environnements  que des attaquants potentiels. 
+Une troisième catégorie de contremesures est celle qui contrairement aux contremesures précédentes,  vise à offusquer la mesure du temps des attaquants. StopWatch  offusque le temps par la réplication des  machines virtuelles  en trois exemplaires  et en  utilisant   la valeur moyenne du temps des réplicas [11]. Le système TimeWarp [12] quant à lui ajoute des délais aléatoires aux mesures de temps. 
+Finalement, Ristenpart et al. [13] ont investigué l’approche de contremesure basée sur l’ordonnancement des machines virtuelles.  Avec un minimum de temps d’ordonnancement, on arrive à inhiber l’attaque.
 
 
-\section{Eo adducta re per Isauriam}
-\label{sec:isauriam}
-
-Eo adducta re per Isauriam, rege Persarum bellis finitimis inligato
-repellenteque a conlimitiis suis ferocissimas gentes, quae mente
-quadam versabili hostiliter eum saepe incessunt et in nos arma
-moventem aliquotiens iuvant, Nohodares quidam nomine e numero
-optimatum, incursare Mesopotamiam quotiens copia dederit ordinatus,
-explorabat nostra sollicite, si repperisset usquam locum vi subita
-perrupturus.
-
-Batnae municipium in Anthemusia conditum Macedonum manu priscorum ab
-Euphrate flumine brevi spatio disparatur, refertum mercatoribus
-opulentis, ubi annua sollemnitate prope Septembris initium mensis ad
-nundinas magna promiscuae fortunae convenit multitudo ad commercanda
-quae Indi mittunt et Seres aliaque plurima vehi terra marique
-consueta.
-  
+\bibliography{rapportM2R}
 %%% Local Variables: 
 %%% mode: latex
 %%% TeX-master: "rapportM2R"
