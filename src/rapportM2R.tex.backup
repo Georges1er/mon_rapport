@@ -97,14 +97,13 @@
 \usepackage[colorlinks]{hyperref}
 \usepackage[all]{hypcap}
 \usepackage{algorithm, algorithmic}
-\usepackage{graphicx}
+
 \usetikzlibrary{shapes,arrows,automata,backgrounds}
 \usepackage{wrapfig}
 %\usepackage[version=3]{mhchem}
 \usepackage{microtype}
 \usepackage{multicol}
-\usepackage{url}   
-\usepackage{float}
+\usepackage{url}    
 \urlstyle{sf}
 % \usepackage[T1]{fontenc}
 % \usepackage{nimbus}
@@ -203,6 +202,7 @@
    \def\glossaryname{Glossaire}%
 }
 
+
 %% Page layout
 \setlength{\oddsidemargin}{1cm}
 \setlength{\evensidemargin}{1.5cm}
@@ -215,64 +215,37 @@
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 \begin{document}
+
 \begin{titlingpage}
  
 \begin{center}
  
-% \begin{wrapfigure}[8]{l}{6cm}  
-% \includegraphics[width=6cm]{ups}
-% \end{wrapfigure}
-          
-\begin{figure}
-    \begin{minipage}[t]{0.84\textwidth}
-        \includegraphics[width=6cm]{ups}
-    \end{minipage}  
-    \begin{minipage}[t]{0.15\textwidth}
-        \begin{flushright}
-        \includegraphics[width=\textwidth]{orange}
-        \end{flushright}
-    \end{minipage}
-\end{figure} \newline{} \newline{} \newline{}
-
+\let\clearpage
 % Upper part of the page
-%%\begin{minipage}{0.2\textwidth}
-%  \begin{flushleft}
-%%    \includegraphics[height=2cm]{ups}\\[1cm]
-%%    
-%%  \end{flushleft}
-%%\end{minipage}    
+\includegraphics[height=2cm]{ups}\\[1cm]
+\includegraphics[height=2cm]{orange}\\[1cm]
+%%
+\begin{minipage}{0.2\textwidth}
+  \begin{flushleft}
+    \includegraphics[width=0.8\textwidth]{cnrs}
+  \end{flushleft}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+  \begin{flushright}
+    \includegraphics[width=0.8\textwidth]{inria}
+  \end{flushright}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+ \begin{flushright}
+   \includegraphics[width=0.6\textwidth]{limsi}
+  \end{flushright}
+\end{minipage}
+\begin{minipage}{0.2\textwidth}
+  \begin{flushright}
+    \includegraphics[width=0.5\textwidth]{lri}
+  \end{flushright}
+\end{minipage}
 
-%%\begin{minipage}{0.2\textwidth}
-%%  \begin{flushright}
-%%  \includegraphics[height=2cm]{orange}\\[1cm]
-%%  \end{flushright}
-%%\end{minipage}
-
-
-%%\begin{minipage}{0.2\textwidth}
-%%  \begin{flushright}
-%%    \includegraphics[width=0.5\textwidth]{lri}
-%%  \end{flushright}
-%%\end{minipage}
-  
-%%\begin{minipage}{0.2\textwidth}
-%%  \begin{flushleft}
-%%    \includegraphics[width=0.8\textwidth]{cnrs}
-%%  \end{flushleft}
-%%\end{minipage}
-%%\begin{minipage}{0.2\textwidth}
-%% \begin{flushright}
-%%    \includegraphics[width=0.8\textwidth]{inria}
-%%  \end{flushright}
-%%\end{minipage}
-%%\begin{minipage}{0.2\textwidth}
-%% \begin{flushright}
-%%   \includegraphics[width=0.6\textwidth]{limsi}
-%%  \end{flushright}
-%%\end{minipage}
-\vfill
-\vfill
-\vfill
 
 \vspace{2cm}  
 \textsc{\Large Stage de Master 2 Recherche en Informatique}\\[0.5cm]
@@ -309,7 +282,7 @@ Orange Labs Issy-les-Moulineaux
 % Bottom of the page
 %{Secrétariat - tél : 01 69 15 75 18  Fax : 01 69 15 42 72\\
 %courrier électronique : Jacques.Laurent@lri.fr\\
-\large{ Du 13 Avril au  30 Septembre 2015}
+\large 13 Avril -- 30 Septembre 2015}
  
 \end{center}
  
@@ -340,9 +313,7 @@ Post, impie, aliis, multatione, domus.
               
 
 \pagenumbering{arabic}
-%\setcounter{page}{1}
-\setcounter{secnumdepth}{4} 
-\setcounter{tocdepth}{4}
+\setcounter{page}{1}
 
 \input{intro}
 \input{devlpmt}
@@ -356,7 +327,6 @@ celsius, volatu rapiunt celeri, aut nisi impetraverint, non
 inmorantur.
      
 \nocite{*}
-
 \bibliographystyle{unsrt}
 %\bibliographystyle{plain}
 \bibliography{rapportM2R}  

@@ -1,46 +1,55 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/Cygwin)
+This is BibTeX, Version 0.99d (TeX Live 2013/Debian)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: rapportM2R.aux
 The style file: plain.bst
 Database file #1: rapportM2R.bib
-You've used 1 entry,
+Warning--to sort, need author or key in gnupg
+Warning--to sort, need author or key in Grid
+Warning--to sort, need author or key in openstack
+Warning--to sort, need author or key in Rsapaper
+Warning--to sort, need author or key in sidechannelattack
+Warning--to sort, need author or key in amazon
+Warning--to sort, need author or key in xen
+Warning--empty institution in Bernstein
+You've used 28 entries,
             2118 wiz_defined-function locations,
-            503 strings with 4068 characters,
-and the built_in function-call counts, 312 in all, are:
-= -- 32
-> -- 7
-< -- 0
-+ -- 3
-- -- 2
-* -- 21
-:= -- 58
-add.period$ -- 3
-call.type$ -- 1
-change.case$ -- 4
+            664 strings with 8920 characters,
+and the built_in function-call counts, 10729 in all, are:
+= -- 1088
+> -- 404
+< -- 18
++ -- 163
+- -- 134
+* -- 658
+:= -- 1538
+add.period$ -- 86
+call.type$ -- 28
+change.case$ -- 152
 chr.to.int$ -- 0
-cite$ -- 1
-duplicate$ -- 11
-empty$ -- 27
-format.name$ -- 2
-if$ -- 61
+cite$ -- 36
+duplicate$ -- 479
+empty$ -- 934
+format.name$ -- 134
+if$ -- 2475
 int.to.chr$ -- 0
-int.to.str$ -- 1
-missing$ -- 1
-newline$ -- 8
-num.names$ -- 2
-pop$ -- 2
+int.to.str$ -- 28
+missing$ -- 19
+newline$ -- 136
+num.names$ -- 42
+pop$ -- 221
 preamble$ -- 1
-purify$ -- 3
+purify$ -- 123
 quote$ -- 0
-skip$ -- 7
+skip$ -- 414
 stack$ -- 0
-substring$ -- 30
-swap$ -- 1
-text.length$ -- 0
+substring$ -- 671
+swap$ -- 188
+text.length$ -- 18
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 4
-warning$ -- 0
-while$ -- 4
-width$ -- 2
-write$ -- 13
+type$ -- 112
+warning$ -- 8
+while$ -- 88
+width$ -- 30
+write$ -- 303
+(There were 8 warnings)
