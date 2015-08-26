@@ -1,4 +1,5 @@
-﻿@inproceedings{Ris2009,
+
+@INPROCEEDINGS{Ris2009,
  author = {Ristenpart, Thomas and Tromer, Eran and Shacham, Hovav and Savage, Stefan},
  title = {Hey, You, Get off of My Cloud: Exploring Information Leakage in Third-party Compute Clouds},
  booktitle = {Proceedings of the 16th ACM Conference on Computer and Communications Security},
@@ -14,9 +15,9 @@
  publisher = {ACM},
  address = {New York, NY, USA},
  keywords = {cloud computing, side channels, virtual machine security},
-}
+}         
 
-@inproceedings{Zhang2012,
+@INPROCEEDINGS{Zhang2012,
  author = {Zhang, Yinqian and Juels, Ari and Reiter, Michael K. and Ristenpart, Thomas},
  title = {Cross-VM Side Channels and Their Use to Extract Private Keys},
  booktitle = {Proceedings of the 2012 ACM Conference on Computer and Communications Security},
@@ -34,15 +35,14 @@
  keywords = {cache-based side channel, cross-vm side channel, side-channel attack},
 }
 
-@misc{gnupg,
+@Misc{gnupg,
  title = {GNUPG Library},
- url = {https://www.gnupg.org/. [Accès le 25 Juillet 2015]},
+ howpublished = {\url{https://www.gnupg.org/}},     
  lastchecked = {25.07.2015},
- 
+         
 }
 
-
-@inproceedings {Yuval,
+@INPROCEEDINGS{Yuval,
 	author = {Yuval Yarom and Katrina Falkner},
 	title = {FLUSH+RELOAD: A High Resolution, Low Noise, L3 Cache Side-Channel Attack},
 	booktitle = {23rd USENIX Security Symposium (USENIX Security 14)},
@@ -54,8 +54,7 @@
 	publisher = {USENIX Association},
 }
 
-
-@inproceedings {STEALTHMEM,
+@INPROCEEDINGS{STEALTHMEM,
 	author = {Taesoo Kim and Marcus Peinado and Gloria Mainar-Ruiz},
 	title = {STEALTHMEM: System-Level Protection Against Cache-Based Side Channel Attacks in the Cloud},
 	booktitle = {Presented as part of the 21st USENIX Security Symposium (USENIX Security 12)},
@@ -64,11 +63,11 @@
 	address = {Bellevue, WA},
 	pages = {189--204},
 	url = {https://www.usenix.org/conference/usenixsecurity12/technical-sessions/presentation/kim},
-	publisher = {USENIX},
+	publisher = {USENIX}, 
 }
 
 
-@inproceedings{duppel,
+@INPROCEEDINGS{duppel,
  author = {Zhang, Yinqian and Reiter, Michael K.},
  title = {D\&\#252;ppel: retrofitting commodity operating systems to mitigate cache side channels in the cloud},
  booktitle = {Proceedings of the 2013 ACM SIGSAC conference on Computer \&\#38; communications security},
@@ -106,7 +105,7 @@ doi={10.1109/TCC.2014.2358236},
 ISSN={2168-7161},}
 
 
-@inproceedings{chameleon,
+@INPROCEEDINGS{chameleon,
 author={Jicheng Shi and Xiang Song and Haibo Chen and Binyu Zang},
 booktitle={Dependable Systems and Networks Workshops (DSN-W), 2011
 IEEE/IFIP 41st International Conference on},
@@ -176,7 +175,7 @@ keywords={cache storage;security of data;software maintenance;software performan
 doi={10.1109/ISCA.2012.6237011},
 ISSN={1063-6897},}
 
-@inproceedings {Ristenpart,
+@INPROCEEDINGS{Ristenpart,
 	author = {Venkatanathan Varadarajan and Thomas Ristenpart and Michael Swift},
 	title = {Scheduler-based Defenses against Cross-VM Side-channels},
 	booktitle = {23rd USENIX Security Symposium (USENIX Security 14)},
@@ -188,37 +187,39 @@ ISSN={1063-6897},}
 	publisher = {USENIX Association},
 }
 
-@misc{NIST,
- 
- title = {NIST Definition of cloud computing},
- url = {http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf},
+@Misc{NIST,
+ author= {P. Mell and T. Grance},
+ title = {NIST Special Publication 800-145 The Definition of Cloud Computing},
+ howpublished = {http://csrc.nist.gov/publications/nistpubs/800-145/SP800-145.pdf},
  lastchecked = {20.08.2015},
+ location= {Gaithersburg},
+ originalyear = {2001},
  
 }
 
-@misc{Grid,
+@Misc{Grid,
  
  title = {Grid computing},
- url = {http://www.gridcomputing.com/},
+ howpublished= {http://www.gridcomputing.com/},
  lastchecked = {14.08.2015},
  
 }
 
-@misc{openstack,
+@Misc{openstack,
  
  title = {OpenStack the cloud operating system},
- url = {https://www.openstack.org/},
+ howpublished = {https://www.openstack.org/},
  lastchecked = {14.08.2015},
  
 }
-
-@misc{amazon,
- title = {Amazon AWS },
- url = {http://aws.amazon.com/fr/},
+ 
+@Misc{amazon,      
+ title = {Amazon AWS},   
+ howpublished = {http://aws.amazon.com/fr/},
  lastchecked = {14.07.2015},
 }
 
-@inproceedings{Wailly,
+@INPROCEEDINGS{Wailly,
  author = {Wailly, Aur{\'e}lien and Lacoste, Marc and Debar, Herv{\'e}},
  title = {VESPA: Multi-layered Self-protection for Cloud Resources},
  booktitle = {Proceedings of the 9th International Conference on Autonomic Computing},
@@ -238,28 +239,28 @@ ISSN={1063-6897},}
 }
 
 
-@misc{OpenCloudware,
+@Misc{OpenCloudware,
  title = {OpenCloudware FSN funded R&D project},
- url = {http://www.ow2.org/bin/view/Collaborative_Projects/OpenCloudware},
+ howpublished= {http://www.ow2.org/bin/view/Collaborative_Projects/OpenCloudware},
  lastchecked = {14.07.2015},
 }
 
-@misc{ibm,
+@Misc{ibm,
  author= {IBM},
  title = {Autonomic computing IBM},
- url = {http://www-03.ibm.com/autonomic/pdfs/AC%20Blueprint%20White%20Paper%20V7.pdf},
+ howpublished = {http://www-03.ibm.com/autonomic/pdfs/AC%20Blueprint%20White%20Paper%20V7.pdf},
  lastchecked = {14.07.2015},
  originalyear={2005},
 }
 
-@misc{Sendsecurity,
- url = {https://townsendsecurity.com/sites/default/files/AES_Introduction.pdf},
+@Misc{Sendsecurity,
+ howpublished = {https://townsendsecurity.com/sites/default/files/AES_Introduction.pdf},
  lastchecked = {20.07.2015},
 }
 
-@misc{Rsapaper,
+@Misc{Rsapaper,
  title = {RSA algorithm},
- url = {https://people.csail.mit.edu/rivest/Rsapaper.pdf},
+ howpublished = {https://people.csail.mit.edu/rivest/Rsapaper.pdf},
  lastchecked = {14.07.2015},
 }
 
@@ -276,15 +277,15 @@ doi={10.1109/ACSAC.2006.20},
 ISSN={1063-9527},}
 
 
-@misc{sidechannelattack,
+@Misc{sidechannelattack,
  title = {Introductionn to Cryptographic Side-Channel Attacks},
- url = {http://www.cs.unc.edu/~reiter/courses/fall2014/notes/SideChannels.pdf},
+ howpublished = {http://www.cs.unc.edu/~reiter/courses/fall2014/notes/SideChannels.pdf},
  lastchecked = {10.07.2015},
  originalyear={12.02.2014},
  
 }
 
-@inproceedings{Kocher,
+@INPROCEEDINGS{Kocher,
  author = {Kocher, Paul C. and Jaffe, Joshua and Jun, Benjamin},
  title = {Differential Power Analysis},
  booktitle = {Proceedings of the 19th Annual International Cryptology Conference on Advances in Cryptology},
@@ -298,19 +299,27 @@ ISSN={1063-9527},}
  publisher = {Springer-Verlag},
  address = {London, UK, UK},
 } 
-
-
-@misc{xen,
- title = {Xen project},
- url = {http://www.xenproject.org/},
- lastchecked = {10.07.2015},
- 
+@INPROCEEDINGS{Fangfei, 
+author={Fangfei Liu and Yarom, Y. and Qian Ge and Heiser, G. and Lee, R.B.}, 
+booktitle={Security and Privacy (SP), 2015 IEEE Symposium on}, 
+title={Last-Level Cache Side-Channel Attacks are Practical}, 
+year={2015}, 
+month={May}, 
+pages={605-622}, 
+keywords={cache storage;cloud computing;security of data;virtual machines;GnuPG;IaaS cloud computing;Prime+Probe side-channel attack;covert channel;cross-VM attack;cross-core attack;last-level cache side-channel attacks;virtual machine monitor;Cryptography;Indexes;Memory management;Monitoring;Multicore processing;Probes;Virtual machine monitors;ElGamal;covert channel;cross-VM side channel;last-level cache;side-channel attack}, 
+doi={10.1109/SP.2015.43}, 
+ISSN={1081-6011},
 }
 
-http://www.xenproject.org/
 
+@Misc{xen,
+ title = {Xen project},
+ howpublished= {http://www.xenproject.org/},
+ lastchecked = {10.07.2015},
+ 
+}            
 
-@inproceedings{AES,
+@INPROCEEDINGS{Osvik,
  author = {Osvik, Dag Arne and Shamir, Adi and Tromer, Eran},
  title = {Cache Attacks and Countermeasures: The Case of AES},
  booktitle = {Proceedings of the 2006 The Cryptographers' Track at the RSA Conference on Topics in Cryptology},
@@ -326,9 +335,9 @@ http://www.xenproject.org/
  publisher = {Springer-Verlag},
  address = {Berlin, Heidelberg},
  keywords = {AES, cache, cryptanalysis, memory access, side-channel attack},
-} 
-
-@inproceedings{ZhangPaas,
+}  
+ 
+@INPROCEEDINGS{ZhangPaas,
  author = {Zhang, Yinqian and Juels, Ari and Reiter, Michael K. and Ristenpart, Thomas},
  title = {Cross-Tenant Side-Channel Attacks in PaaS Clouds},
  booktitle = {Proceedings of the 2014 ACM SIGSAC Conference on Computer and Communications Security},
@@ -345,8 +354,8 @@ http://www.xenproject.org/
  address = {New York, NY, USA},
  keywords = {cache-based side channels, cloud security, platform-as-a-service, side-channel attacks},
 } 
-
-
+  
+          
 
 @INPROCEEDINGS{HomeAlone,
 author={Yinqian Zhang and Juels, A. and Oprea, A. and Reiter, M.K.},
@@ -386,10 +395,18 @@ doi={10.1109/ISPA.2009.47},}
  doi = {10.1145/325096.325161},
  acmid = {325161},
  publisher = {ACM},
- address = {New York, NY, USA},
+ address = {New York, NY, USA},        
 } 
+@TECHREPORT{Bernstein,
+    author = {Daniel J. Bernstein},
+    title = {Cache-timing attacks on AES},
+    institution = {},
+    year = {2005}      
+}
 
-P. Mell et T. Grance, NIST Special Publication 800-145 The Definition of Cloud Computing, Gaithersburg, 2001. 
+ 
+                  
+     
 
 
 
